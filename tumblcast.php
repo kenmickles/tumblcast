@@ -79,7 +79,7 @@ foreach ( $data['posts'] as $post ) {
 	// continue if this is an audio post and we can parse out the audio file URL
 	if ( $post['type'] == 'audio' && preg_match('/\?audio_file=(.*)&color=/', $post['audio-player'], $matches) ) {
 		
-		// follow the Tumblr redirect URL to fetch the actual URL and file size for this mp3
+		// follow the Tumblr redirect to fetch the actual URL and file size for this mp3
 		// note that this only seems to work with external audio files
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $matches[1]);
