@@ -22,7 +22,7 @@ $podcast = array(
 	'language' => 'en-us',
 );
 
-// fetch and ectract data from the Tumblr API
+// fetch and extract data from the Tumblr API
 $url = 'http://'.$tumblr_id.'.tumblr.com/api/read/json';
 $response = trim(file_get_contents($url));
 $data = json_decode(str_replace('var tumblr_api_read = ', '', trim($response, ';')), 1);
